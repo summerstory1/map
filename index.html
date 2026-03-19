@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Map Maker's Process</title>
+    <title>The Cartographer's Journey | Map Art Story</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -11,56 +11,66 @@
     <section class="hero">
         <div class="hero-content">
             <h1>The Art of the Map</h1>
-            <p>A journey from a blank canvas to a world of detail.</p>
-            <div class="scroll-indicator">↓ Scroll to see the process</div>
+            <p>From a mathematical grid to a hand-labeled world.</p>
+            <div class="scroll-hint">Scroll to explore the process</div>
         </div>
     </section>
 
-    <div class="scrolly-container">
-        <div class="image-stage" id="imageStage">
-            <img src="step1.jpg" class="active" data-step="1" alt="Grid on canvas">
-            <img src="step2.jpg" data-step="2" alt="Beginning stage of coloring">
-            <img src="step3.jpg" data-step="3" alt="Halfway through the process">
-            <img src="step4.jpg" data-step="4" alt="Finishing the coloring">
-            <img src="step5.jpg" data-step="5" alt="The final labeled map">
+    <main class="scrolly-container">
+        <div class="image-stage">
+            <button class="zoom-btn" onclick="openZoom()" aria-label="Zoom Map">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line><line x1="11" y1="8" x2="11" y2="14"></line><line x1="8" y1="11" x2="14" y2="11"></line></svg>
+                <span>Click to Enlarge</span>
+            </button>
+            
+            <img src="step1.jpg" class="active" data-step="1" alt="Grid on canvas" onclick="openZoom()">
+            <img src="step2.jpg" data-step="2" alt="Beginning coloring" onclick="openZoom()">
+            <img src="step3.jpg" data-step="3" alt="Halfway point" onclick="openZoom()">
+            <img src="step4.jpg" data-step="4" alt="Finishing colors" onclick="openZoom()">
+            <img src="step5.jpg" data-step="5" alt="Final labels" onclick="openZoom()">
         </div>
 
         <div class="content-scroll">
             <section class="step" data-step="1">
-                <span class="step-number">01</span>
+                <div class="step-label">Stage 01</div>
                 <h2>The Grid on Canvas</h2>
-                <p>To ensure perfect proportions, I translated a small map onto this large canvas using a grid system. This foundation allows me to scale every coastline and border accurately across the massive surface.</p>
+                <p>I started with a small print-out of the world map and drew a precise grid. By creating the same ratio grid on a large canvas, I turned a daunting empty space into a series of manageable squares.</p>
             </section>
 
             <section class="step" data-step="2">
-                <span class="step-number">02</span>
-                <h2>First Strokes</h2>
-                <p>The journey of a thousand miles begins with the first drop of pigment. In this beginning stage, I establish the primary color palette and lay down the base layers of the oceans and continents.</p>
+                <div class="step-label">Stage 02</div>
+                <h2>Initial Tones</h2>
+                <p>The first layers of color are the most exciting. Here, I establish the depth of the oceans and the basic foundations of the continents, following the lines set by my grid.</p>
             </section>
 
             <section class="step" data-step="3">
-                <span class="step-number">03</span>
-                <h2>The Halfway Mark</h2>
+                <div class="step-label">Stage 03</div>
+                <h2>Developing the Landscape</h2>
                 <p>With the base colors set, the world begins to take shape. This is the stage where depth is added through shading and topographical details, bridging the gap between a sketch and a painting.</p>
             </section>
 
             <section class="step" data-step="4">
-                <span class="step-number">04</span>
-                <h2>Completing the Color</h2>
+                <div class="step-label">Stage 04</div>
+                <h2>Refining the Palette</h2>
                 <p>Finishing the coloring process involves refining the transitions between land and sea. Every island and peninsula is now vibrantly rendered, awaiting the final layer of information.</p>
             </section>
 
             <section class="step" data-step="5">
-                <span class="step-number">05</span>
+                <div class="step-label">Stage 05</div>
                 <h2>The Final Labels</h2>
                 <p>The final stage is the most meticulous: labeling every country. This transformation turns a piece of art into a functional map, providing the final layer of human geography to the natural landscape.</p>
             </section>
         </div>
+    </main>
+
+    <div id="zoomOverlay" class="zoom-overlay" onclick="closeZoom()">
+        <span class="close-btn">&times;</span>
+        <img id="zoomedImg" src="" alt="Full view">
     </div>
 
-    <section class="footer">
-        <p>From Grid to Globe &bull; A Cartographic Study</p>
-    </section>
+    <footer class="footer">
+        <p>From Grid to Globe • A Cartographic Study</p>
+    </footer>
 
     <script src="script.js"></script>
 </body>
