@@ -1,25 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Website</title>
-
-  <!-- Link to CSS -->
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Map Maker's Process</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <header>
-    <h1>Welcome to My Website</h1>
-  </header>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>The Art of the Map</h1>
+            <p>A journey from a blank canvas to a world of detail.</p>
+            <div class="scroll-indicator">↓ Scroll to see the process</div>
+        </div>
+    </section>
 
-  <main>
-    <p>This is a basic HTML boilerplate.</p>
-    <button id="btn">Click me</button>
-  </main>
+    <div class="scrolly-container">
+        <div class="image-stage" id="imageStage">
+            <img src="step1.jpg" class="active" data-step="1" alt="Grid on canvas">
+            <img src="step2.jpg" data-step="2" alt="Beginning stage of coloring">
+            <img src="step3.jpg" data-step="3" alt="Halfway through the process">
+            <img src="step4.jpg" data-step="4" alt="Finishing the coloring">
+            <img src="step5.jpg" data-step="5" alt="The final labeled map">
+        </div>
 
-  <!-- Link to JavaScript -->
-  <script src="script.js"></script>
+        <div class="content-scroll">
+            <section class="step" data-step="1">
+                <span class="step-number">01</span>
+                <h2>The Grid on Canvas</h2>
+                <p>To ensure perfect proportions, I translated a small map onto this large canvas using a grid system. This foundation allows me to scale every coastline and border accurately across the massive surface.</p>
+            </section>
+
+            <section class="step" data-step="2">
+                <span class="step-number">02</span>
+                <h2>First Strokes</h2>
+                <p>The journey of a thousand miles begins with the first drop of pigment. In this beginning stage, I establish the primary color palette and lay down the base layers of the oceans and continents.</p>
+            </section>
+
+            <section class="step" data-step="3">
+                <span class="step-number">03</span>
+                <h2>The Halfway Mark</h2>
+                <p>With the base colors set, the world begins to take shape. This is the stage where depth is added through shading and topographical details, bridging the gap between a sketch and a painting.</p>
+            </section>
+
+            <section class="step" data-step="4">
+                <span class="step-number">04</span>
+                <h2>Completing the Color</h2>
+                <p>Finishing the coloring process involves refining the transitions between land and sea. Every island and peninsula is now vibrantly rendered, awaiting the final layer of information.</p>
+            </section>
+
+            <section class="step" data-step="5">
+                <span class="step-number">05</span>
+                <h2>The Final Labels</h2>
+                <p>The final stage is the most meticulous: labeling every country. This transformation turns a piece of art into a functional map, providing the final layer of human geography to the natural landscape.</p>
+            </section>
+        </div>
+    </div>
+
+    <section class="footer">
+        <p>From Grid to Globe &bull; A Cartographic Study</p>
+    </section>
+
+    <script src="script.js"></script>
 </body>
 </html>
